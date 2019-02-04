@@ -1,0 +1,82 @@
+<!DOCTYPE=HTML>
+<html>
+  <head>
+
+    <title> Infina Music </title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+  <body onload="finaltime()" style="background-color:#000000">
+    <div class="background-image"></div>
+    <div class="content">
+    <div class="header">
+    <div class="pagename">
+    <h1> infina music </h1>
+    </div>
+    <div width="30%" height="100%" style="Margin:20px; margin-right: 90px;">
+      <div class="tab" width="100%" >
+        <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Simple')">Simple View</button>
+        <button class="tablinks" onclick="openCity(event, 'Info')">Song Info</button>
+        <button class="tablinks" onclick="openCity(event, 'Queue')">Queue</button>
+      </div>
+    </div>
+  </table>
+
+    <Table width="100%">
+
+      <th width="30%">
+        <img src="Music\Bensound\Sunny\Artwork.png" alt="Artwork" class="artwork" >
+      </th>
+
+      <th width="70%">
+
+          <div id="Simple" class="tabcontent">
+            <p class="songtitle">Better Days</p>
+            <p class="songartist">BenSound</p>
+          </div>
+
+          <div id="Info" class="tabcontent">
+            <p class="songtitle">Better Days</p>
+            <p class="songartist">BenSound</p>
+          </div>
+
+          <div id="Queue" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+        </div>
+
+        <audio preload autoplay id="audio">
+          <source src="Music\Bensound\Better Days\Better Days.mp3" type="audio/mpeg" ontimeupdate="track(this)">
+        </audio>
+
+
+      </th>
+
+    </table>
+
+    <div class="buttons">
+      <img onclick="skipback()" src="Reasources\skip-back.png" id="skipback" class="skipbutton"></img>
+      <img onclick="playpause()" src="Reasources\play-button.png" id="playbutton" class="playbutton"></img>
+      <img onclick="skipahead()" src="Reasources\skip-ahead.png" id="skipahead" class="skipbutton"></img>
+    </div>
+
+      <br>
+      <table class="Scrubbar">
+        <th>
+          <p class="timestamp" id="currenttime">0:00</p>
+        </th>
+        <th width="60%">
+          <input  type="range" min="0" width="90%" max="100000000" value="0" class="track" id="track" oninput="trackupdate()">
+        </th>
+        <th>
+          <p class="timestamp" id="totaltime">0:00</p>
+        </th>
+      </table>
+
+      <script src="Reasources/playpause.js">
+      </script>
+
+    </div>
+  </body>
+</html>

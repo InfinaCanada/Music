@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(font.ttf);
+}
+
+.artwork{
+  height:350px;
+  width: auto;
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width:100%;
+  height:100%;
+  display: block;
+  background-image: url('Music/Bensound/Sunny/Artwork.png');
+  margin: 0;
+  width:100%;
+  height:100%;
+  background-size: cover;
+  transform: scale;
+  transform: scale(1.1);
+  opacity: 0.4;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.songtitle {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  line-height: 5px;
+  font-weight: 100;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+.songartist {
+  font-size: 25px;
+  color: #d0d0d0;
+  text-align: left;
+  line-height: 5px;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ .playbutton {
+   height: 60px;
+   width: 60px;
+ }
+
+ .skipbutton {
+   height: 40px;
+   width: 40px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+ }
+
+.track {
+  Width: 100%;
+  height: 1px;
+  -webkit-appearance: none;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 10px;
+
+}
+
+.track:hover {
+  opacity: 1;
+}
+
+.track::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.track::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.timestamp {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+.pagename {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5%;
+  font-weight: 100;
+  width: 20%;
+  float: left;
+}
+
+.scrubbar {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.buttons {
+  float: center;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 20px;
+  height: 60px;
+}
+
+.tab {
+  overflow: hidden;
+  width: 70%;
+  margin-right: 5%;
+  margin-left: 35%;
+}
+
+.tab button {
+  outline:0;
+  float: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 33.3%;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.tab button:hover {
+  opacity: 0.4;
+}
+
+.tab button.active {
+  opacity: 1;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  animation: fadeEffect 1s;
+  vertical-align: middle;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+th {
+  vertical-align: top;
+}
+.header {
+  width: 100%;
+}
